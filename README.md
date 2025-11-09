@@ -42,7 +42,7 @@ This MCP server provides comprehensive documentation, examples, and guidance for
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/nextmcp-docs-server.git
+git clone https://github.com/KeshavVarad/nextmcp-docs-server.git
 cd nextmcp-docs-server
 
 # Install dependencies
@@ -71,7 +71,7 @@ docker run -p 8000:8000 nextmcp-docs-server
 
 # Create project in Conduit dashboard
 # - Name: NextMCP Docs Server
-# - Git URL: https://github.com/YOUR_USERNAME/nextmcp-docs-server
+# - Git URL: https://github.com/KeshavVarad/nextmcp-docs-server
 # - Branch: main
 
 # Deploy via dashboard or CLI
@@ -215,5 +215,5 @@ MIT License - see LICENSE file for details
 ## Support
 
 For issues or questions:
-- GitHub Issues: https://github.com/YOUR_USERNAME/nextmcp-docs-server/issues
+- GitHub Issues: https://github.com/KeshavVarad/nextmcp-docs-server/issues
 - NextMCP Discussions: https://github.com/KeshavVarad/NextMCP/discussions
