@@ -647,4 +647,5 @@ if __name__ == "__main__":
     print("  • 3 Resources (stats, docs/{id}, examples/{name})")
     print("\n⚡ Server ready to help build MCP servers!\n")
 
-    app.run()
+    # Run with HTTP transport on 0.0.0.0:8000 for deployment
+    app.run(host="0.0.0.0", port=8000)
