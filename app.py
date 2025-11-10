@@ -647,5 +647,5 @@ if __name__ == "__main__":
     print("  • 3 Resources (stats, docs/{id}, examples/{name})")
     print("\n⚡ Server ready to help build MCP servers!\n")
 
-    # Run with SSE transport for cloud/Kubernetes deployment
-    app.run(transport="sse", host="0.0.0.0", port=8000)
+    # Run with HTTP transport (not SSE) for Claude Code compatibility
+    app.run(transport="http", host="0.0.0.0", port=8000)
