@@ -1,1 +1,2 @@
+# NextMCP with SSE transport fix (commit 6b97223)
 git+https://github.com/KeshavVarad/NextMCP.git@main
