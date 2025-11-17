@@ -1,0 +1,119 @@
+{
+  "tools": [
+    {
+      "name": "search_documentation",
+      "description": "Search NextMCP documentation for relevant articles",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query (e.g., 'tools', 'authentication', 'deployment')"
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "get_full_doc",
+      "description": "Get the complete documentation for a specific topic",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "description": "Document ID (e.g., 'tools', 'deployment', 'examples')"
+          }
+        },
+        "required": ["doc_id"]
+      }
+    },
+    {
+      "name": "list_categories",
+      "description": "List all documentation categories",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_example_code",
+      "description": "Get example code for common NextMCP patterns",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "example_name": {
+            "type": "string",
+            "description": "Example to retrieve (e.g., 'simple-tool', 'auth-setup', 'resource-template')"
+          }
+        },
+        "required": ["example_name"]
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "name": "build_server_prompt",
+      "description": "Build a new MCP server",
+      "arguments": [
+        {
+          "name": "server_type",
+          "description": "Type of server to build",
+          "required": true
+        },
+        {
+          "name": "features",
+          "description": "Features to include",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "debug_prompt",
+      "description": "Debug a NextMCP server issue",
+      "arguments": [
+        {
+          "name": "issue_type",
+          "description": "Type of issue",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "learn_prompt",
+      "description": "Learn about NextMCP features",
+      "arguments": [
+        {
+          "name": "topic",
+          "description": "Topic to learn",
+          "required": true
+        },
+        {
+          "name": "learn_style",
+          "description": "Learning style",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "uri": "docs://stats",
+      "name": "Documentation Server Statistics",
+      "description": "Get current documentation statistics including total docs, searches, and categories",
+      "mimeType": "application/json"
+    },
+    {
+      "uri": "docs://{doc_id}",
+      "name": "Documentation by ID",
+      "description": "Access specific documentation by ID (e.g., 'tools', 'prompts', 'resources', 'deployment')",
+      "mimeType": "application/json"
+    },
+    {
+      "uri": "examples://{example_name}",
+      "name": "Example Code",
+      "description": "Access example code by name (e.g., 'simple-tool', 'auth-setup', 'resource-template')",
+      "mimeType": "application/json"
+    }
+  ]
+}
